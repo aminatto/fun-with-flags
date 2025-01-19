@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
+import { countriesApi } from "./services";
 import { Card, Footer, Grid, Header } from "./components"
 
 type Country = {
@@ -23,17 +24,15 @@ export default function Home() {
 
   useEffect(() => {
     const fetchCountries = async () => {
-      try {
-        const response = await fetch(
-          "https://restcountries.com/v3.1/all?fields=cca3,flags,name,capital,region,population");
-        const data = await response.json();
-        setCountries(data);
-      } catch (error) {
-        console.log(error);
-        setError("Failed to fetch data");
-      } finally {
-        setLoading(false);
+      const [response, error] = await countriesApi.getAll();
+      setLoading(false);
+
+      if (error) {
+        setError(error);
+        return;
       }
+
+      setCountries(response);
     };
 
     fetchCountries();
