@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <header className="py-6 mb-8">
+        <header className="py-6 mt-8">
             <p className="text-center">
                 Made with ♥ by Amanda Minato
             </p>
