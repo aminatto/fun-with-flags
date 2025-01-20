@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { countriesApi } from "./services";
 import { Card, Footer, Grid, Header } from "./components"
 
@@ -54,8 +55,8 @@ export default function Home() {
               const [capitalName] = capital ?? {};
 
               return (
-                <Card
-                  key={cca3}
+                <Link key={cca3} href={`/country/${cca3}`}>
+                <Card 
                   index={index}
                   flag={flag}
                   name={countryName}
@@ -63,6 +64,7 @@ export default function Home() {
                   region={region}
                   population={population}
                 />
+                </Link>
               )
             }
           )}
