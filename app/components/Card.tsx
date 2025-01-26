@@ -14,7 +14,7 @@ const Card = ({ index, flag, name, capital, region, population }: CardProps) => 
         <div className="h-full overflow-hidden bg-white rounded-lg shadow-lg">
             <div className="aspect-video w-full">
                 <Image
-                    src={flag || "https://via.placeholder.com/640x360"}
+                    src={flag || "/flag_placeholder.svg"}
                     alt={`Flag of ${name}`}
                     className="w-full h-full object-cover"
                     width={500}
