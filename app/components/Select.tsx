@@ -87,7 +87,7 @@ const Select = ({ options, selected, setSelected }: SelectProps) => {
                     aria-activedescendant={`option-${focusedIndex}`}
                     onKeyDown={handleListKeyDown}
                     id="listbox"
-                    className="absolute bg-white mt-2 border-gray-300 rounded-lg shadow-md w-full overflow-hidden focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="absolute z-10 bg-white mt-2 border-gray-300 rounded-lg shadow-md w-full overflow-hidden focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 >
                     {options.map((option, index) => (
                         <li
