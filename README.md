@@ -2,7 +2,7 @@
 
 # Fun with Flags
 
-Project to list the world countries and their info using https://restcountries.com/ API.
+Project to list the world countries and their info using a public country catalog and the Flagcdn image CDN.
 
 Available in: https://fun-with-flags-eta.vercel.app/
 
